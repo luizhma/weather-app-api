@@ -1,7 +1,6 @@
-<h1>ACMJ Weather</h1> 
+<h1>App API Weather</h1> 
 
 Este projeto foi feito usando Angular CLI versão 9.1.7.
-
 
 
 API para consultar a previsão do tempo usando [OpenWeather](https://openweathermap.org/api).
