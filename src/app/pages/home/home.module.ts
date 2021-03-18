@@ -10,6 +10,7 @@ import { homeReducer } from './state/home.reducer';
 import { HomeEffects } from './state/home.effects';
 import { ComponentsModule } from 'src/app/shared/components/components.module';
 import { CurrentWeatherComponent } from './components/current-weather/current-weather.component';
+import { DetailsModule } from '../details/details.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CurrentWeatherComponent } from './components/current-weather/current-we
     StoreModule.forFeature('home', homeReducer),
     EffectsModule.forFeature([HomeEffects]),
     ComponentsModule,
+    DetailsModule
   ],
   declarations: [
     HomePage,
