@@ -1,18 +1,17 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 
-import { routerReducer, RouterReducerState } from '@ngrx/router-store';
+import { RouterReducerState } from '@ngrx/router-store';
 
-import { RouterState } from './rourter.reducer';
+import { RouterState } from './router.reducer';
 
-const selectRouterReducerState = createFeatureSelector<RouterReducerState<RouterState>>('router')
+const selectRouterReducerState = createFeatureSelector<RouterReducerState<RouterState>>('router');
 
-export const selectRouterState = createSelector (
-    selectRouterReducerState,
-    (routerReducerState: RouterReducerState<RouterState>) => (routerReducerState && routerReducerState.state) || {},
+export const selectRouterState = createSelector(
+  selectRouterReducerState,
+  (routerReducerState: RouterReducerState<RouterState>) => (routerReducerState && routerReducerState.state) || {},
 );
 
 export const selectRouterQueryParams = createSelector(
-    selectRouterState,
-    (routerState: RouterState) => (routerState && routerState.queryParams) || {}
-
+  selectRouterState,
+  (routerState: RouterState) => (routerState && routerState.queryParams) || {},
 );

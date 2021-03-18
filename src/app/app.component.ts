@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as moment from 'moment-timezone';
+import 'moment/locale/pt-br';
 
 @Component({
   selector: 'jv-root',
